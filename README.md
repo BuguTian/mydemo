@@ -2,5 +2,5 @@
 
 项目列表如下：
 
-- chatroom
+### [chatroom](chatroom/README.md)
   用 golang 语言实现的聊天室程序，主要展示的是 websocket 服务端的实现方法，介绍了基本的并发模型的运行方式；
