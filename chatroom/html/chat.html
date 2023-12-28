@@ -1,0 +1,106 @@
+<html>
+<head>
+<style>
+li {
+	list-style-type: none;
+	display: inline-block;
+	margin: 25px;
+	line-height: 30px;
+	cursor: hand;
+	text-align: center;
+}
+
+div.order-line {
+	vertical-align: top;
+}
+
+div.error {
+	color: red;
+}
+
+div.order-line div {
+	display: inline-block;
+}
+
+li img {
+	width: 64px;
+	height: 64px;
+}
+
+hr {
+	border: 1px solid #95B8E7
+}
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+<body>
+  <div style="width: 99%; border: 1px solid #aaa; padding: 5px; margin-top: 5px;">
+    <table style="width: 100%;">
+      <tr>   
+        <td  width="70%">
+          <div id="remoteMessage"
+            style="width: 99%; padding: 5px; font-size: 14px; overflow: auto; border: 1px solid #aaa">
+          </div>
+        </td>
+        <td>
+          <div style="margin-left:10px;">
+            <table style="width: 100%; border: 0px">
+              <tr>
+                <td width="30%">
+                  <textarea id="user_name" placeholder="用户名"	style="width: 100%"></textarea>
+                </td>
+                <td>
+                  <input id="login" type="button" value="登录" onclick="reConnect()"> 
+                  <!-- <input id="logout" type="button" value="退出" onclick="Logout()"> -->
+                </td>
+              </tr>
+              <!-- <tr>
+                <td width="30%">
+                  <textarea id="room_id" placeholder="房间ID"	style="width: 100%"></textarea>
+                </td>
+                <td>
+                  <input id="enter_room" type="button" value="进入房间" onclick="joinRoom()"> 
+                  <input id="out_room" type="button" value="退出房间" onclick="exitRoom()">
+                </td>
+              </tr> -->
+              <tr>
+                <td>
+                  <input id="create_room" type="button" value="创建房间" onclick="createRoom()"> 
+                </td>
+                <td>
+                  <input id="out_room" type="button" value="退出房间" onclick="exitRoom()">
+                </td>
+                <td>
+                  <input id="create_room" type="button" value="获取房间列表" onclick="getRoomList()">
+                </td>
+              </tr>
+            </table>
+            <p>房间列表(点击ID进入房间)</p>
+            <ul id="room_list" style="height:80%">
+            </ul>
+          </div>
+        </td>
+      </tr>
+    </table>
+  </div>
+	<div style="width: 99%; border: 1px solid #aaa; padding: 5px; margin-bottom: 5px; background-color: #F9F9F9">
+		<table style="width: 100%; border: 0px">
+			<tr>
+				<td  width="60%"><textarea id="message" style="width: 100%" rows=3 placeholder="请输入要发送的命令"></textarea>
+				<td valign="bottom">
+					<input type="button" value="发送" onclick="sendRoomMessage()"> 
+					<!--input type="button" value="命令" onclick="openOrder()"--> 
+					<input type="button" value="清屏" onclick="clearMessage()">
+					<!-- <input type="button" value="Ctrl+C" onclick="EndText()">  -->
+					<div style="font-size: 12px; float: right">
+						<!--input type="button" onclick="saveLogTxt()" value="保存日志文件" /--> 
+						<!-- <span style="padding-left: 20px;">背景:</span>
+						<input id="backgroundColor" type="color" onchange="changeColor(this)" /> <span>文字:</span>
+						<input id="color" type="color" onchange="changeColor(this)" /> -->
+					</div>
+        </tr>
+		</table>
+	</div>
+	<script src="js/jquery-1.7.1.min.js"></script>
+	<script src="js/chatroom.js"></script>
+</html>
