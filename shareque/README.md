@@ -3,6 +3,8 @@
 
 ### 构建方法
 ```
+mkdir bin
+mkdir obj
 make
 ```
 ### 使用方法
@@ -15,11 +17,15 @@ chmod 777 /tmp/SemMtx
 ```
 
 2. 开两个终端都进入 bin 目录
+
 一个终端执行
+
 ```
 ./WriteShm
-``` 
+```
+
 另一个终端执行
+
 ```
 ./ReadShm
 ``` 
